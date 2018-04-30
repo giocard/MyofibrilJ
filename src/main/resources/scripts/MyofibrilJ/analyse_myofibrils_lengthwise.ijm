@@ -11,10 +11,10 @@
 */
 /* Results
  * Parameters estimated:
- *   sarcomere lenght
+ *   sarcomere length
  *   fibril thickness
  * Both measures are estimated in different ways
- * Sarcomere lenght/repeat:
+ * Sarcomere length/repeat:
  *   - A global estimate is obtained by measuring the periodicity in the Fourier Transform (FT) from the entire image.
  *   - A localized estimate is obtained similarly but after dividing the image in subregions and averaging their FT
  * Fibril thickness:

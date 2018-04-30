@@ -6,10 +6,10 @@ Descriptions of the routines and installation instructions are available at the 
 
 
 
-## [Routines]
+## Routines
 Routines currently implemented:
 
-1. **Analyze myofibril lenghtwise**: estimate the average sarcomere lenght and the average width of the fibrils 
+1. **Analyze myofibril lengthwise**: estimate the average sarcomere length and the average thickness of the fibrils 
 1. **Analyze myofibril crosswise**: estimate the average diameter of the fibrils and their degree of clustering 
 
 
