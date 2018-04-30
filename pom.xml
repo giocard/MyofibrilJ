@@ -13,7 +13,7 @@
 	</parent>
 
 	<artifactId>MyofibrilJ</artifactId>
-	<version>0.1.1</version>
+	<version>0.1.2</version>
 
 	<name>MyofibrilJ</name>
 	<description>A set of scripts to analyse myofibrils</description>
