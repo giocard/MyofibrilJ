@@ -304,7 +304,8 @@ function findRepeat(fftID){
     profile = getProfile();
 
     // find periodicity by testing all plausible values
-    minRepeat = 3;
+    profile_smooth = smoothProfile(profile);
+    minRepeat = findFirstMinimum(profile_smooth)+1;
     maxRepeat = floor((profile.length-1)/1.5);
     bestMetric = 0;
     repeat = -1;
@@ -594,6 +595,29 @@ function estimateThickness(imgID, refTitle, period){
     results = newArray(physicalOptimalThickness, physicalRealspaceThickness, physicalRealspaceThicknessError, thickArray.length);
     return results;
 
+}
+
+
+function smoothProfile(profile){
+/*
+ * smoothing by 3-points average sliding window
+ * 
+ */
+
+    output_profile = Array.copy(profile);
+    for (i=0; i<(profile.length-1); i++) {
+    	output_profile[i] = output_profile[i] + profile[i+1];
+    }
+    for (i=1; i<profile.length; i++) {
+    	output_profile[i] = output_profile[i] + profile[i-1];
+    }
+    output_profile[0] = output_profile[0]/2.;
+    output_profile[profile.length-1] = output_profile[profile.length-1]/2.;
+    for (i=1; i<(profile.length-1); i++) {
+    	output_profile[i] = output_profile[i] / 3.;
+    }
+    
+    return output_profile;
 }
 
 
